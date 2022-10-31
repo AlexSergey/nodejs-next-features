@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-next-features",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --loader ts-node/esm --test tests/**/*.spec.ts",
+    "start": "node --loader ts-node/esm --watch src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexSergey/nodejs-next-features.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexSergey/nodejs-next-features/issues"
+  },
+  "homepage": "https://github.com/AlexSergey/nodejs-next-features#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.8",
+    "ts-node": "^10.9.1",
+    "tsx": "^3.11.0"
+  }
+}
