@@ -1,6 +1,6 @@
 import { run } from 'node:test';
 import { resolve } from 'node:path';
-import { glob } from 'glob';
+import * as glob from 'glob';
 
-run({ files: glob.sync('./tests/**/*.spec.ts') })
+run({ files: glob.default.sync('./tests/**/*.spec.ts') })
   .pipe(process.stdout);
