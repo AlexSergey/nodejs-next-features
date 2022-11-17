@@ -1,10 +1,10 @@
 import { describe, it } from 'node:test';
 import { strict as assert } from 'node:assert';
 
-import { calc } from '../src/calc';
+import { taxCalculator } from '../src/tax-calculator';
 
-describe('A thing', () => {
-  it('should work', () => {
-    assert.strictEqual(calc(2, 2), 4);
+describe('Calc test', () => {
+  it('Compare result', () => {
+    assert.strictEqual(taxCalculator(2, 2), 3);
   });
 });

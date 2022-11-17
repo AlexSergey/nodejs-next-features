@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "node --loader ts-node/esm --test tests/**/*.spec.ts",
-    "start": "node --loader ts-node/esm --watch src/index.ts"
+    "test": "node --loader ts-node/esm tests.ts",
+    "start": "node --loader ts-node/esm --watch src/index.ts --cost=100"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,9 @@
   },
   "homepage": "https://github.com/AlexSergey/nodejs-next-features#readme",
   "devDependencies": {
+    "@types/glob": "^8.0.0",
     "@types/node": "^18.11.8",
+    "glob": "^8.0.3",
     "ts-node": "^10.9.1",
     "tsx": "^3.11.0"
   }
