@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node --loader ts-node/esm tests.ts",
-    "start": "node --loader ts-node/esm --watch src/index.ts --cost=100"
+    "test": "cross-env NODE_ENV=test node --loader ts-node/esm tests.ts",
+    "start": "cross-env NODE_ENV=development node --loader ts-node/esm --experimental-specifier-resolution=node --enable-source-maps --watch src/index.ts --cost=100"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,10 @@
     "url": "https://github.com/AlexSergey/nodejs-next-features/issues"
   },
   "homepage": "https://github.com/AlexSergey/nodejs-next-features#readme",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "tslog": "^4.2.0"
+  },
   "devDependencies": {
     "@types/glob": "^8.0.0",
     "@types/node": "^18.11.8",

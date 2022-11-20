@@ -1,6 +1,9 @@
 import { parseArgs } from 'node:util';
 
 import { taxCalculator } from './tax-calculator.js';
+import { logger } from './logger';
+
+logger.silly('Calculation in progress');
 
 const res = await fetch('http://www.randomnumberapi.com/api/v1.0/random?min=100&max=1000');
 const [tax]: [number] = await res.json();
